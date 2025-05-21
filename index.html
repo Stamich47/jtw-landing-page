@@ -3,111 +3,343 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Actor Landing Page</title>
-
+    <title>Jamie T. Wong — Writer / Comedian / Actor</title>
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-
-    <!-- Your custom CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
+      .navbar {
+        background: #b30000;
+      }
+      .navbar a,
+      .navbar-brand {
+        color: #fff !important;
+        font-weight: bold;
+      }
+      .hero-section {
+        background: #b30000;
+        color: #fff;
+        padding: 4rem 0 2rem 0;
+        text-align: center;
+      }
+      .hero-section h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+      .hero-section .lead {
+        font-size: 1.25rem;
+      }
+      .contact-icons a {
+        color: #fff;
+        margin: 0 0.5rem;
+        font-size: 1.5rem;
+      }
+      .section-title {
+        color: #ffffff;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+      .accordion-button:not(.collapsed) {
+        background: #f8d7da;
+        color: #b30000;
+      }
+      .footer {
+        background: #222;
+        color: #fff;
+        padding: 2rem 0;
+        text-align: center;
+      }
+      .sticky-top {
+        z-index: 1020;
+      }
+    </style>
   </head>
   <body>
-    <header
-      class="header d-flex flex-column align-items-center justify-content-center text-center min-vh-100"
-    >
-      <h1>Jamie T. Wong</h1>
-      <p class="lead">Aspiring Actor | Writer | Storyteller</p>
-    </header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Jamie T. Wong</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#representation">Representation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Writing Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-    <section class="bio px-3">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-md-6 mb-4 mb-md-0">
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img
-                  src="./assets/placeholder1.jpg"
-                  alt="Jamie T. Wong Photo 1"
-                  class="img-fluid rounded"
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="./assets/placeholder2.jpg"
-                  alt="Jamie T. Wong Photo 2"
-                  class="img-fluid rounded"
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="./assets/placeholder3.jpg"
-                  alt="Jamie T. Wong Photo 3"
-                  class="img-fluid rounded"
-                />
-              </div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="swiper mySwiper mb-4">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="./assets/placeholder1.jpg"
+                alt="Jamie T. Wong Photo 1"
+                class="img-fluid rounded"
+              />
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/placeholder2.jpg"
+                alt="Jamie T. Wong Photo 2"
+                class="img-fluid rounded"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/placeholder3.jpg"
+                alt="Jamie T. Wong Photo 3"
+                class="img-fluid rounded"
+              />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <h1>Jamie T. Wong</h1>
+        <p class="lead mb-3">Writer / Comedian / Actor</p>
+      </div>
+    </section>
+
+    <!-- Representation Info -->
+    <section id="representation" class="container">
+      <h2 class="section-title">Representation</h2>
+      <div class="accordion" id="repAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="agencyHeading">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#agencyCollapse"
+              aria-expanded="true"
+            >
+              Agency Rep
+            </button>
+          </h2>
+          <div
+            id="agencyCollapse"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#repAccordion"
+          >
+            <div class="accordion-body small">
+              <strong>Worldwide Artists Group</strong><br />
+              Agent: Christina Price<br />
+              <a href="mailto:cprice@wwag-la.com">cprice@wwag-la.com</a>
+            </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 text-center text-md-start">
-          <h2>About Me</h2>
-          <p>
-            Hi, I'm Jamie T. Wong, a writer/actor passionate about bringing
-            stories to life. Currently seeking new roles in theater and film.
-            Let's connect!
-          </p>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="legalHeading">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#legalCollapse"
+            >
+              Entertainment Legal Representation
+            </button>
+          </h2>
+          <div
+            id="legalCollapse"
+            class="accordion-collapse collapse"
+            data-bs-parent="#repAccordion"
+          >
+            <div class="accordion-body small">
+              <strong>Clifford Lo, ESQ</strong><br />
+              <a href="mailto:cliff.lo@cl-legal.com">cliff.lo@cl-legal.com</a
+              ><br />
+              <a
+                href="https://www.linkedin.com/in/lawofficesofcliffordlo/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i> LinkedIn</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="contact text-center mt-4">
-      <h3>Contact</h3>
-      <div class="contact-icons">
-        <a href="mailto:john@example.com" aria-label="Email"
-          ><i class="fas fa-envelope"></i
-        ></a>
-        <a href="tel:+1234567890" aria-label="Phone"
-          ><i class="fas fa-phone"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/johndoe"
-          target="_blank"
-          aria-label="LinkedIn"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-        <a
-          href="https://www.instagram.com/johndoe"
-          target="_blank"
-          aria-label="Instagram"
-          ><i class="fab fa-instagram"></i
-        ></a>
+    <!-- Writing Projects -->
+    <section id="projects" class="container">
+      <h2 class="section-title">Writing Projects</h2>
+      <div class="accordion" id="projectsAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#project1"
+              aria-expanded="true"
+              aria-controls="project1"
+            >
+              Blackbird
+            </button>
+          </h2>
+          <div
+            id="project1"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#projectsAccordion"
+          >
+            <div class="accordion-body">
+              <em>Logline:</em> A gripping TV script that follows the journey of
+              a woman navigating the complexities of identity and ambition in a
+              world that refuses to let her soar. (PDF script, 22 pages)
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#project2"
+              aria-expanded="false"
+              aria-controls="project2"
+            >
+              The CoCo Lee Story (The Beginning, The Middle, The Final Act)
+            </button>
+          </h2>
+          <div
+            id="project2"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#projectsAccordion"
+          >
+            <div class="accordion-body">
+              <em>Logline:</em> The extraordinary life of CoCo Lee, from her
+              humble beginnings to international stardom, and the challenges she
+              faced along the way. A story of resilience, fame, and legacy.<br />
+              <img
+                src="assets/cocolee.jpg"
+                alt="CoCo Lee"
+                class="img-fluid rounded mt-2"
+                style="max-width: 200px"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#project3"
+              aria-expanded="false"
+              aria-controls="project3"
+            >
+              Jamie T - The Billionaire: Rich Bitch Problems
+            </button>
+          </h2>
+          <div
+            id="project3"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#projectsAccordion"
+          >
+            <div class="accordion-body">
+              <em>Logline:</em> A comedic exploration of the outrageous and
+              hilarious problems only the ultra-wealthy face, as seen through
+              Jamie T's unique lens.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#project4"
+              aria-expanded="false"
+              aria-controls="project4"
+            >
+              Jamie T. Movie and Book Reviews
+            </button>
+          </h2>
+          <div
+            id="project4"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFour"
+            data-bs-parent="#projectsAccordion"
+          >
+            <div class="accordion-body">
+              <em>Logline:</em> The new version of the old Siskel and Ebert,
+              with a twist! Jamie T. brings fresh, witty, and insightful takes
+              on the latest movies and books.
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Bootstrap JS Bundle -->
+    <!-- Footer -->
+    <footer id="footer" class="footer mt-5">
+      <div class="container">
+        <p>
+          PO Box 123, Stanford, CA 94305 &nbsp;|&nbsp; PO Box 456, Los Angeles,
+          CA 90001
+        </p>
+        <p>
+          <a href="mailto:Jamie@JamieTWong.com" class="text-white"
+            ><i class="fas fa-envelope"></i> Jamie@JamieTWong.com</a
+          >
+        </p>
+        <div class="contact-icons">
+          <a href="https://www.linkedin.com/in/jamietwong" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://www.instagram.com/jamietwong" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Your custom JS -->
     <script src="script.js"></script>
   </body>
 </html>

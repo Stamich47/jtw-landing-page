@@ -1,6 +1,6 @@
 body {
-  background-color: #b30000; /* red background */
-  color: black; /* black text */
+  background-color: #b30000;
+  color: black;
 }
 
 .header {
@@ -15,10 +15,4 @@ body {
   color: black;
   margin-right: 1rem;
   font-size: 1.5rem;
-}
-/* Swiper size */
-.swiper {
-  width: 300px;
-  height: 300px;
-  margin: 2rem auto;
 }
