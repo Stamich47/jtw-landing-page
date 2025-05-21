@@ -1,0 +1,24 @@
+body {
+  background-color: #b30000; /* red background */
+  color: black; /* black text */
+}
+
+.header {
+  padding: 2rem 1rem;
+}
+
+.bio {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+.contact-icons a {
+  color: black;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+/* Swiper size */
+.swiper {
+  width: 300px;
+  height: 300px;
+  margin: 2rem auto;
+}
