@@ -19,6 +19,7 @@ body {
 
 .navbar {
   background: var(--stanford-red);
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .navbar a,
@@ -44,7 +45,7 @@ body {
 }
 
 .hero-section {
-  min-height: 100vh;
+  min-height: calc(100vh - 76px);
   display: flex;
   align-items: center;
   padding: 0;
@@ -109,4 +110,14 @@ body {
 
 .sticky-top {
   z-index: 1020;
+}
+
+section {
+  scroll-margin-top: 76px;
+}
+
+@media (max-width: 1000px) {
+  section {
+    scroll-margin-top: 30vh;
+  }
 }
