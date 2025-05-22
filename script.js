@@ -1,15 +1,13 @@
 const swiper = new Swiper(".mySwiper", {
   loop: true,
+  effect: "fade",
+  speed: 1000,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
   autoplay: {
-    delay: 3000,
+    delay: 2500,
     disableOnInteraction: false,
   },
 });
