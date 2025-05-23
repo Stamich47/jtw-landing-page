@@ -1,43 +1,48 @@
-const swiper = new Swiper(".mySwiper", {
-  loop: true,
-  effect: "fade",
-  speed: 1000,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-});
-
+// Swiper initialization
 document.addEventListener("DOMContentLoaded", function () {
+  // Swiper for desktop hero images
+  if (window.innerWidth >= 1200) {
+    new Swiper(".mySwiper", {
+      loop: true,
+      effect: "fade",
+      speed: 1000,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    });
+  }
+
+  // Animate.css hero animation
   function handleHeroAnimation() {
     const heroText = document.querySelector(".hero-text-animate");
     if (!heroText) return;
-    if (window.innerWidth >= 1200) {
-      heroText.classList.add("animate__animated", "animate__fadeInLeft");
-    } else {
-      heroText.classList.remove("animate__animated", "animate__fadeInLeft");
-      heroText.classList.add("animate__animated", "animate__fadeInLeft");
-    }
+    heroText.classList.remove("animate__animated", "animate__fadeInLeft");
+    // Always re-add to retrigger animation on resize
+    void heroText.offsetWidth; // force reflow
+    heroText.classList.add("animate__animated", "animate__fadeInLeft");
   }
   handleHeroAnimation();
   window.addEventListener("resize", handleHeroAnimation);
-});
 
-document.addEventListener("DOMContentLoaded", function () {
+  // Pop Image Modal (fixes double backdrop bug)
+  var imageModalEl = document.getElementById("imageModal");
+  var imageModal = new bootstrap.Modal(imageModalEl);
+
   document.querySelectorAll(".pop-image").forEach(function (img) {
     img.addEventListener("click", function () {
       var modalImg = document.getElementById("modalImage");
       modalImg.src = this.src;
       modalImg.alt = this.alt || "";
-      var modal = new bootstrap.Modal(document.getElementById("imageModal"));
-      modal.show();
+      imageModal.show();
     });
   });
 
+  // Navbar collapse on link click (for mobile)
   var navLinks = document.querySelectorAll(".navbar-collapse .nav-link");
   var navbarCollapse = document.querySelector(".navbar-collapse");
   navLinks.forEach(function (link) {

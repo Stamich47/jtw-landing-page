@@ -123,6 +123,11 @@ section {
   scroll-margin-top: 76px;
 }
 
+.pop-image {
+  border: 1px solid #ffffff62;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
 .pop-image:hover {
   transform: scale(1.05);
   transition: all 0.3s ease-in-out;

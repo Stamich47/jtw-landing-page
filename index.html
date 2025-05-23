@@ -4,6 +4,21 @@
     <link rel="icon" type="image/png" href="./favicon.ico" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Jamie T. Wong - Writer / Comedian / Actor"
+    />
+    <meta name="keywords" content="Jamie T. Wong, Writer, Comedian, Actor" />
+    <meta name="author" content="Jamie T. Wong" />
+    <meta property="og:title" content="Jamie T. Wong" />
+    <meta
+      property="og:description"
+      content="Jamie T. Wong - Writer / Comedian / Actor"
+    />
+    <meta property="og:image" content="./assets/logo_1.png" />
+    <meta property="og:url" content="https://jamietwong.com" />
+    <meta property="og:type" content="website" />
+
     <title>Jamie T. Wong — Writer / Comedian / Actor</title>
 
     <link
@@ -132,7 +147,6 @@
                 data-bs-toggle="modal"
                 data-bs-target="#imageModal"
                 style="
-                  height: 30vw;
                   max-height: 600px;
                   min-height: 250px;
                   object-fit: cover;
@@ -150,7 +164,6 @@
                 data-bs-toggle="modal"
                 data-bs-target="#imageModal"
                 style="
-                  height: 30vw;
                   max-height: 600px;
                   min-height: 250px;
                   object-fit: cover;
@@ -168,7 +181,6 @@
                 data-bs-toggle="modal"
                 data-bs-target="#imageModal"
                 style="
-                  height: 30vw;
                   max-height: 600px;
                   min-height: 250px;
                   object-fit: cover;
@@ -502,20 +514,26 @@
     <!-- Pop-Out Modal -->
     <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content bg-transparent border-0">
-          <button
-            type="button"
-            class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-          <img
-            id="modalImage"
-            src=""
-            alt="Large view"
-            class="img-fluid rounded-2 shadow"
-            style="display: block; margin: auto; max-height: 80vh"
-          />
+        <div class="modal-content border-0 bg-transparent">
+          <div class="modal-header border-0 p-0">
+            <button
+              type="button"
+              class="btn-close btn-close-white ms-auto m-3"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div
+            class="modal-body p-0 d-flex justify-content-center align-items-center"
+          >
+            <img
+              id="modalImage"
+              src=""
+              alt="Large view"
+              class="img-fluid rounded-2 shadow"
+              style="display: block; margin: auto; max-height: 80vh"
+            />
+          </div>
         </div>
       </div>
     </div>
