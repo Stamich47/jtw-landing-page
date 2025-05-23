@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
       heroText.classList.add("animate__animated", "animate__fadeInLeft");
     } else {
       heroText.classList.remove("animate__animated", "animate__fadeInLeft");
-      heroText.classList.add("animate__animated", "animate__fadeIn");
+      heroText.classList.add("animate__animated", "animate__fadeInLeft");
     }
   }
   handleHeroAnimation();
@@ -28,6 +28,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".pop-image").forEach(function (img) {
+    img.addEventListener("click", function () {
+      var modalImg = document.getElementById("modalImage");
+      modalImg.src = this.src;
+      modalImg.alt = this.alt || "";
+      var modal = new bootstrap.Modal(document.getElementById("imageModal"));
+      modal.show();
+    });
+  });
+
   var navLinks = document.querySelectorAll(".navbar-collapse .nav-link");
   var navbarCollapse = document.querySelector(".navbar-collapse");
   navLinks.forEach(function (link) {

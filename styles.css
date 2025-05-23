@@ -101,6 +101,13 @@ body {
   padding-top: 1.25rem;
 }
 
+.card:hover {
+  transform: translateY(-4px) scale(1.01);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 8px 32px rgba(140, 21, 21, 0.12),
+    0 3px 8px rgba(140, 21, 21, 0.1);
+}
+
 .footer {
   background: var(--stanford-gray);
   color: #fff;
@@ -114,6 +121,11 @@ body {
 
 section {
   scroll-margin-top: 76px;
+}
+
+.pop-image:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 1000px) {
