@@ -5,8 +5,27 @@
 }
 
 body {
-  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-family: "Lora", serif;
   background: linear-gradient(120deg, var(--stanford-red) 60%, #fff 100%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title,
+.navbar-brand {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+h1,
+.display-3,
+.section-title {
+  font-style: italic;
 }
 
 /* Navbar */
@@ -198,5 +217,54 @@ section {
   }
   .hero-img-overlay {
     border-radius: 1.5rem;
+  }
+}
+
+/* ...existing code... */
+
+.footer-addresses {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center the address boxes */
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-addresses > div {
+  flex: 0 1 320px; /* Prevents stretching, keeps boxes same width */
+  max-width: 340px;
+  min-width: 200px;
+
+  border-radius: 1rem;
+  padding: 1.2rem 1rem;
+  margin: 0 0.5rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 767.98px) {
+  .footer-addresses {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .footer-addresses > div {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    font-size: 0.97rem;
+    padding: 1rem 0.5rem;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .footer-addresses > div {
+    font-size: 0.92rem;
+    padding: 0.75rem 0.25rem;
   }
 }
