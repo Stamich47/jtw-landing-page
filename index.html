@@ -69,6 +69,9 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
             <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
@@ -130,6 +133,75 @@
       </div>
     </section>
 
+    <!-- Gallery -->
+    <section id="gallery" class="bg-dark text-white">
+      <div class="container py-5">
+        <h2 class="section-title mb-4 text-white text-center">Gallery</h2>
+        <div class="row g-4 justify-content-center pb-4">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div
+              class="gallery-tile position-relative overflow-hidden rounded-3 shadow"
+            >
+              <img
+                src="./assets/jamie_nun_1.JPG"
+                alt="Gallery Image 1"
+                class="img-fluid w-100 h-100 object-fit-cover"
+                style="aspect-ratio: 4/5; object-position: top; cursor: pointer"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                onclick="document.getElementById('modalImage').src = this.src"
+              />
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <div
+              class="gallery-tile position-relative overflow-hidden rounded-3 shadow"
+            >
+              <img
+                src="./assets/jamie_jersey_1.JPG"
+                alt="Gallery Image 2"
+                class="img-fluid w-100 h-100 object-fit-cover"
+                style="aspect-ratio: 4/5; object-position: top; cursor: pointer"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                onclick="document.getElementById('modalImage').src = this.src"
+              />
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <div
+              class="gallery-tile position-relative overflow-hidden rounded-3 shadow"
+            >
+              <img
+                src="./assets/jamie_nun_2.JPG"
+                alt="Gallery Image 3"
+                class="img-fluid w-100 h-100 object-fit-cover"
+                style="aspect-ratio: 4/5; object-position: top; cursor: pointer"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                onclick="document.getElementById('modalImage').src = this.src"
+              />
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <div
+              class="gallery-tile position-relative overflow-hidden rounded-3 shadow"
+            >
+              <img
+                src="./assets/headshot_1.jpg"
+                alt="Gallery Image 4"
+                class="img-fluid w-100 h-auto object-fit-cover"
+                style="aspect-ratio: 4/5; object-position: top; cursor: pointer"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                onclick="document.getElementById('modalImage').src = this.src"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Projects -->
     <section id="projects" class="container py-5">
       <h2 class="section-title mb-4 text-white text-center">Projects</h2>
@@ -177,8 +249,10 @@
         <div class="simple-item py-3">
           <h5 class="mb-1 fw-bold">To BABA (To Father)</h5>
           <div class="small fst-italic">
-            Short film about a Chinese father’s last months with lung cancer and
-            his daughters’ struggles fulfilling his bucket list.
+            A short film filmed by award-winning directors, telling the story of
+            "To"—a Chinese father's final months with lung cancer, how his
+            physician daughters grapple with the reality of his diagnosis, and
+            their desires to carry out his "bucket list".
           </div>
         </div>
         <hr class="simple-separator my-2" />
@@ -187,8 +261,10 @@
         <div class="simple-item py-3">
           <h5 class="mb-1 fw-bold">BAD M.D. (Feature Film)</h5>
           <div class="small fst-italic">
-            True story of Dr. Patel, a neurologist creating a Beverly Hills
-            clinic misdiagnosing patients for profit.<br />
+            Based on a true story — the Neurologist Doctor Patel breaks into
+            Hollywood with the help of Tony Robbins, to create the most elite
+            medical clinic in Beverly Hills that misdiagnoses patients for his
+            own profit. Based on a true story.<br />
             <strong>Dream cast:</strong> Dev Patel, Pedro Pascal.
           </div>
         </div>
@@ -198,8 +274,10 @@
         <div class="simple-item py-3">
           <h5 class="mb-1 fw-bold">Notice to Vacate (Feature Film)</h5>
           <div class="small fst-italic">
-            Low-budget Asian American horror/thriller based on true story during
-            COVID-19 eviction.
+            Low budget Asian American horror-thriller based on a true story.<br />
+            A young Chinese nursing student moves into the house of a quirky
+            female drug-addict landlord, who dies 32 days after her move-in
+            date. The scary journey of eviction during Covid-19.
           </div>
         </div>
         <hr class="simple-separator my-2" />
