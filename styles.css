@@ -32,6 +32,8 @@ h1,
 .navbar {
   background: var(--stanford-red);
   border-bottom: 1px solid #e5e5e5;
+  font-family: "Lora", serif;
+  font-style: italic;
 }
 .navbar a,
 .navbar-brand {
@@ -271,4 +273,9 @@ section {
 .gallery-tile:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
+}
+
+.larger-title {
+  font-size: 1.15rem;
+  font-weight: bold;
 }
