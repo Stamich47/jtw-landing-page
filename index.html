@@ -484,24 +484,25 @@
     <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content border-0 bg-transparent">
-          <div class="modal-header border-0 p-0">
-            <button
-              type="button"
-              class="btn-close btn-close-white ms-auto m-3"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
           <div
             class="modal-body p-0 d-flex justify-content-center align-items-center"
           >
-            <img
-              id="modalImage"
-              src=""
-              alt="Large view"
-              class="img-fluid rounded-2 shadow"
-              style="display: block; margin: auto; max-height: 80vh"
-            />
+            <div style="position: relative; display: inline-block">
+              <img
+                id="modalImage"
+                src=""
+                alt="Large view"
+                class="img-fluid rounded-2 shadow"
+                style="display: block; max-height: 80vh"
+              />
+              <button
+                type="button"
+                class="btn-close btn-close-white position-absolute"
+                style="top: 12px; right: 12px; z-index: 10"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
           </div>
         </div>
       </div>
