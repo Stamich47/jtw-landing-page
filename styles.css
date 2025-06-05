@@ -279,3 +279,7 @@ section {
   font-size: 1.15rem;
   font-weight: bold;
 }
+
+.social-media:hover {
+  font-weight: bold !important;
+}
